@@ -1,0 +1,79 @@
+.pageContainer {
+    padding: 20px;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a2e); 
+    color: #f0f0f0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .questionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #00aaff;
+  }
+  
+  .questionCard,
+  .answerCard {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(20, 20, 40, 0.85);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .questionCard:hover,
+  .answerCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .questionText,
+  .answerText {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #e0e0e0;
+  }
+  
+  .authorText {
+    font-size: 0.85rem;
+    color: #888;
+  }
+
+  .button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #ff4b4b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #0088cc;
+    transform: scale(1.05);
+  }
+  
+  .answerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .answerForm textarea {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: rgba(20, 20, 40, 0.85);
+    color: #fff;
+    resize: none;
+  }
+  
+  .answerForm button {
+    align-self: flex-start;
+  }
+    

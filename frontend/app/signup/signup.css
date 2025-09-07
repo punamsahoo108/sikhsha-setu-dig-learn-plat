@@ -1,0 +1,110 @@
+/* signup.css - Dark theme consistent with Login */
+
+/* Background & container */
+.signupBody {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a2e); 
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+}
+
+/* Title */
+.signupBody h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00aaff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Form container */
+.signupFormbody {
+    background-color: rgba(20, 20, 40, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 170, 255, 0.3);
+    width: 350px;
+    max-width: 90%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Input fields */
+.signupFormbody input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signupFormbody input::placeholder {
+    color: rgba(200, 200, 200, 0.7);
+}
+
+.signupFormbody input:focus {
+    background-color: rgba(0, 0, 50, 0.5);
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.6);
+}
+
+/* Error messages */
+.signupFormbody p {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* Message (success/failure) */
+.signupFormbody > div:first-child {
+    color: #00aaff;
+    font-weight: bold;
+    text-align: center;
+    min-height: 1.2rem;
+}
+
+/* Submit button */
+.signupFormbody button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #005f99, #00aaff);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signupFormbody button:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 170, 255, 0.5);
+}
+
+.signupFormbody button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .signupFormbody {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .signupBody h2 {
+        font-size: 2rem;
+    }
+}

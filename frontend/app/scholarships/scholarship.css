@@ -1,0 +1,115 @@
+.scholarship-section {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+  color: #ffffff;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #5dade2; /* blue accent */
+  margin-bottom: 0.75rem;
+}
+
+.section-header p {
+  font-size: 1.05rem;
+  color: #cfd3f6;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.scholarship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* bigger cards */
+  gap: 2rem;
+  justify-items: center;
+}
+
+.scholarship-card {
+  background: rgba(30, 50, 80, 0.35); /* bluish glass */
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px; /* bigger card */
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.scholarship-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  background: rgba(40, 70, 120, 0.45);
+}
+
+.scholarship-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0;
+  color: #5dade2; /* blue accent */
+}
+
+.scholarship-card p {
+  font-size: 0.95rem;
+  color: #cfd3f6;
+  line-height: 1.5;
+}
+
+.scholarship-card img {
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  width: 140px;
+  height: 140px;
+}
+
+@media (max-width: 1024px) {
+  .scholarship-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .scholarship-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .scholarship-card {
+    max-width: 320px;
+    padding: 1.2rem;
+  }
+
+  .scholarship-card img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scholarship-card {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .scholarship-card img {
+    width: 110px;
+    height: 110px;
+  }
+}

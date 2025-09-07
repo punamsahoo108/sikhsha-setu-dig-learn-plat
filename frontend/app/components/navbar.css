@@ -1,0 +1,218 @@
+
+:root {
+  --navGradient1: #0d0d0d;
+  --navGradient2: #1a1a2e;
+  --navFontColor: #f0f0f0;
+
+  --navulHover1: #162447;
+  --navulHover2: #1f4068;
+  --navulActve: #00aaff;
+
+  --subNav1: #0f0f2d;
+  --subNav2: #1a1a40;
+  --RegistrationButton: #00aaff;
+
+  --signinGradient1: #0d0d0d;
+  --signinGradient2: #1a1a2e;
+  --signinHeaderColor: #162447;
+  --signaddon: #1f4068;
+  --signinBtn: #00aaff;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background-image: linear-gradient(
+    135deg,
+    var(--navGradient1),
+    var(--navGradient2)
+  );
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px;
+  margin: auto;
+  border-bottom: 1px solid rgba(240, 240, 240, 0.1);
+}
+
+nav ul {
+  display: flex;
+  margin-right: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li {
+  list-style: none;
+  padding-right: 2rem;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--navFontColor);
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+nav ul li a:not(.active):hover {
+  background-image: linear-gradient(var(--navulHover1), var(--navulHover2));
+  transform: translateY(-2px);
+}
+
+.active {
+  background-color: var(--navulActve);
+  color: #fff;
+}
+
+nav .menu {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+nav .menu span {
+  height: 0.25rem;
+  width: 100%;
+  background-color: var(--navFontColor);
+  border-radius: 0.2rem;
+}
+
+.subNav {
+  display: flex;
+}
+
+.registration-nav {
+  padding: 2px;
+  background-image: linear-gradient(var(--subNav1), var(--subNav2));
+  display: flex;
+  border-right: 3px solid #00aaff;
+}
+.registration-nav button {
+  height: 1.8rem;
+  background-color: var(--RegistrationButton);
+  text-align: center;
+  margin: 0.3rem;
+  font-size: 0.8rem;
+  width: 5rem;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+.registration-nav button:hover {
+  background-color: #0088cc;
+  transform: scale(1.05);
+}
+
+.update {
+  background-image: linear-gradient(var(--subNav1), var(--subNav2));
+  display: flex;
+  align-items: center;
+  color: var(--navFontColor);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.updatehead {
+  font-weight: bolder;
+  margin-right: 1rem;
+}
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 50s linear infinite;
+}
+
+.marquee-content span {
+  margin-right: 50px;
+}
+
+.marquee-content span a {
+  text-decoration: none;
+  color: var(--navFontColor);
+  transition: color 0.2s;
+}
+.marquee-content span a:hover {
+  color: #00aaff;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  nav .menu {
+    display: flex;
+  }
+  .nav-link {
+    width: 100%;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    top: 3.5rem;
+    background-color: var(--navGradient2);
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+  nav ul.open {
+    display: flex;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li a {
+    margin: 0.1rem 0.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 744px) {
+  .registration-nav button {
+    margin-right: 0px;
+    width: 4rem;
+    height: 1.5rem;
+    font-size: 0.5rem;
+  }
+  .updatehead {
+    font-weight: 500;
+    font-size: 10px;
+  }
+  .marquee-content {
+    font-size: 10px;
+  }
+}

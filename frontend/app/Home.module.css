@@ -1,0 +1,134 @@
+/* Home.module.css */
+
+/* Carousel */
+.carouselComp {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+  
+  .carouselInner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 700px;
+  }
+  
+  .carouselItem {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .carouselItem.active {
+    left: 0;
+    opacity: 1;
+  }
+  
+  .carouselImg {
+    border-radius: 10px;
+    width: 100%;
+    height: 700px;
+    object-fit: contain;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    animation: zoomIn 8s ease-in-out forwards;
+  }
+  
+  @keyframes zoomIn {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
+  
+  .carouselPrev,
+  .carouselNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(52, 29, 108, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .carouselPrev { left: 1rem; }
+  .carouselNext { right: 1rem; }
+  
+  .carouselIndicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .carouselIndicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+  
+  .carouselIndicators button.active {
+    background-color: violet;
+  }
+  
+  /* Cards */
+  .cardCont {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 3rem;
+    gap: 2rem;
+    /* border-bottom: 1px solid var(--navFontColor); */
+  }
+  
+  .card {
+    flex: 0 1 15rem;  
+    margin-bottom: 2rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  /* FAQ */
+  .FAQHead { text-align: center; margin: 1rem; }
+  .AccordContainer { margin-bottom: 5rem; display: flex; flex-direction: column; gap: 1rem; color: black;}
+  .accordionButton { width: 100%; text-align: left; padding: 0.8rem 1rem; cursor: pointer; background-color: #eee; border: none; border-radius: 5px; font-weight: bold; color: black;}
+  .accordionBody { padding: 0.8rem 1rem; background-color: #f9f9f9; border-radius: 5px; color: black;}
+  
+  /* Footer */
+  .footer1 { background-color: var(--footer1); text-align: center; padding: 1rem; font-weight: bolder; color: var(--footerText); position: relative; z-index: 1; }
+  .backToTop { display: flex; justify-content: center; align-items: center; background-color: var(--footer2); padding: 1rem; z-index: 1000; cursor: pointer; }
+  .backToTop button {
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: var(--footerText);
+    background-color: var(--footer2);
+    border-width: 1px;
+    border-color: aliceblue;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: floatBtn 2.5s ease-in-out infinite;
+  }
+  .backToTop button:hover { background-color: var(--footerTextHover); transform: scale(1.1); }
+  @keyframes floatBtn { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+  
+  /* Responsive */
+  @media (max-width: 768px) { .carouselImg { height: 300px; } }
+  @media (max-width: 480px) { .carouselImg { height: 200px; } }
+  

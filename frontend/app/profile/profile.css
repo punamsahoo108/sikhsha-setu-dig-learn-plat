@@ -1,0 +1,27 @@
+.profileBody {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profileFormBody {
+    border: 2px solid white;
+    width: 20vw;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profileFormBody input {
+    width: 18vw;
+}
+
+.profileFormBody p {
+    color: red;
+}

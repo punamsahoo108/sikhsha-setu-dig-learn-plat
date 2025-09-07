@@ -1,0 +1,107 @@
+.container {
+    padding: 2rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #00aaff;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  }
+  
+  .askButton {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #005f99, #00aaff);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 1.5rem;
+  }
+  
+  .askButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 170, 255, 0.5);
+  }
+  
+  .questionCard {
+    background-color: rgba(20, 20, 40, 0.85);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .questionCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 170, 255, 0.4);
+  }
+  
+  .questionText {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .author {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  .cardButtons {
+    margin-top: 0.5rem;
+  }
+  
+  .cardButtons button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .cardButtons button.viewBtn {
+    background: linear-gradient(135deg, #005f99, #00aaff);
+    color: #fff;
+  }
+  
+  .cardButtons button.viewBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 170, 255, 0.5);
+  }
+  
+  .cardButtons button.deleteBtn {
+    background: #ff4b4b;
+    color: #fff;
+  }
+  
+  .cardButtons button.deleteBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(255, 75, 75, 0.5);
+  }
+  
+  /* Loading & error */
+  .loading,
+  .error {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    .questionCard {
+      padding: 0.8rem;
+    }
+  
+    .cardButtons button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+  
