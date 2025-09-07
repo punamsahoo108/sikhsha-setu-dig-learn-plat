@@ -1,1 +1,1 @@
-# sikhsha-setu-dig-learn-plat
+# shiksha-setu-dig-learn-plat
